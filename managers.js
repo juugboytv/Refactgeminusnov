@@ -1376,6 +1376,16 @@ ZoneManager.resizeCanvas();
 ZoneManager.draw();
 });
 ui.mapCloseBtn.addEventListener('click', () => ui.fullScreenMapOverlay.classList.add('hidden'));
+// Navigation dropdown event listener
+if (ui.navDropdown) {
+ui.navDropdown.addEventListener('change', (e) => {
+const selectedTab = e.target.value;
+if (selectedTab) {
+GameManager.switchTab(selectedTab);
+e.target.value = ''; // Reset to placeholder after selection
+}
+});
+}
 },
 switchTab(tabName) {
 document.querySelectorAll('#main-tabs-container .main-tab-button, #main-tab-content .main-tab-panel').forEach(el => el.classList.remove('active'));
