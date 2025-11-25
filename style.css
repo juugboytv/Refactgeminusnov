@@ -305,6 +305,48 @@ body.theme-molten-core #chat-modal .tab.active { animation-name: pulse-main-tab-
 #key-interact, .key-interact { width: 170px; height: 50px; font-size: 18px; font-weight: 700; margin-top: 10px; }
 .game-key.pressed { background: rgba(10, 10, 12, 0.85); border-color: var(--glow-color); transform: scale(0.95);
     box-shadow: 0 0 15px var(--glow-color), 0 0 20px rgba(0,0,0,0.6) inset; color: var(--glow-color); }
+/* --- Navigation Dropdown Styles --- */
+.nav-dropdown-select {
+    width: 100%;
+    padding: 8px 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color-main);
+    border-radius: 6px;
+    color: var(--highlight-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 0 0 5px var(--highlight-color);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2322d3ee' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+.nav-dropdown-select:hover {
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 8px rgba(var(--highlight-color-rgb), 0.3);
+}
+.nav-dropdown-select:focus {
+    outline: none;
+    border-color: var(--glow-color);
+    box-shadow: 0 0 12px rgba(var(--highlight-color-rgb), 0.5);
+}
+.nav-dropdown-select option {
+    background: #1e232d;
+    color: var(--text-primary);
+    padding: 8px;
+}
+body.theme-molten-core .nav-dropdown-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23f97316' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+}
+#nav-dropdown-container {
+    max-width: 180px;
+}
+
 /* --- Footer Controls Toggle --- */
 #footer-section { transition: all 0.4s ease-in-out; }
 #communication-panel { flex-grow: 1; transition: all 0.4s ease-in-out; }
